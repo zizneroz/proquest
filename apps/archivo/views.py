@@ -23,6 +23,15 @@ def proquest_zip(request, pk):
     parse_result = CreateXML().queryset_to_xml(registros[0])
     return redirect('/archivo/media/%s/%s' % ('files_zip', parse_result))
 
+def download_file(request, path_f, file_name):
+    path_to_file = 'media/%s/%s' % (path_f,file_name)
+    file_download = open(path_to_file, 'rb')
+    #myfile = open(f)
+    response = HttpResponse(file_download, content_type='application/force-download') 
+    response['Content-Disposition'] = 'attachment; filename=%s' % file_name
+    #response['X-Sendfile'] = smart_str(path_to_file)
+    return response
+
 
 #Vistas basadas en Clases
 class Archivo_form(BSModalCreateView):
@@ -54,14 +63,6 @@ class Proquest_update(UpdateView):
     success_message = 'Registro actualizado'
     success_url = reverse_lazy('archivo:index')
 
-def download_file(request, path_f, file_name):
-    path_to_file = 'media/%s/%s' % (path_f,file_name)
-    file_download = open(path_to_file, 'rb')
-    #myfile = open(f)
-    response = HttpResponse(file_download, content_type='application/force-download') 
-    response['Content-Disposition'] = 'attachment; filename=%s' % file_name
-    #response['X-Sendfile'] = smart_str(path_to_file)
-    return response
 
 # Vistas basadas en Metodos
 
