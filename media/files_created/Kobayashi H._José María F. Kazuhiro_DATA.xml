@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DISS_submission embargo_code="0" publishing_option="0" third_party_search="Y">
+  <DISS_authorship>
+    <DISS_author type="primary">
+      <DISS_name>
+        <DISS_surname>Kobayashi H.</DISS_surname>
+        <DISS_fname>José María F. Kazuhiro</DISS_fname>
+        <DISS_middle></DISS_middle>
+      </DISS_name>
+    </DISS_author>
+  </DISS_authorship>
+  <DISS_description apply_for_copyright="no" external_id="ECM01:990000767870302716" page_count="2 volumes" type="doctoral">
+    <DISS_title>La educación como conquista: empresa franciscana en México</DISS_title>
+    <DISS_dates>
+      <DISS_comp_date>1972</DISS_comp_date>
+      <DISS_accept_date></DISS_accept_date>
+    </DISS_dates>
+    <DISS_language>SP</DISS_language>
+    <DISS_degree>doctoral</DISS_degree>
+    <DISS_institution>
+      <DISS_inst_code>2063</DISS_inst_code>
+      <DISS_inst_name>El Colegio de México. Centro de Estudios Históricos</DISS_inst_name>
+      <DISS_processing_code>D</DISS_processing_code>
+    </DISS_institution>
+  </DISS_description>
+  <DISS_content>
+    <DISS_abstract>
+      <DISS_para></DISS_para>
+    </DISS_abstract>
+    <DISS_binary type="PDF">kobayashi_jm_000321624.pdf</DISS_binary>
+  </DISS_content>
+</DISS_submission>

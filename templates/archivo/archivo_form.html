@@ -1,0 +1,60 @@
+{% load widget_tweaks %}
+<form method="POST" enctype="multipart/form-data" action="">
+    {% csrf_token %}
+    <div class="modal-header">
+            <h5 class="modal-title" id="uploadFileLabel">Carga desde CSV</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">                       
+                {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %} alert-danger{% endif %}">{{ message|safe }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+                <div class="form-group">
+                    <label for="tipo">{{ form.nombre.label_tag }}</label>
+                    {{form.nombre}}
+                </div>
+                <div class="form-group">
+                    <label for="tipo">{{ form.descripcion.label_tag }}</label>
+                    {{form.descripcion}}
+                </div>
+                <div class="custom-file">
+                    {{form.archivo}}
+                    <label class="custom-file-label" for="customFile">{{form.archivo.label_tag}}</label>
+                </div>
+                <!--{{ form.as_p }}-->
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+
+        <script>
+            $(".custom-file-input").on("change", function() {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+        </script>
+    
+    <!--OR -->
+    <!--<div class="form-group">
+        <label for="nombre">{{ form.nombre }}</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+    </div>
+    <div class="form-group">
+        <label for="tipo">{{ form.tipo }}</label>
+        <input type="text" class="form-control" id="tipo" placeholder="CSV o XML">
+    </div>
+    <div class="form-group">
+            <label for="desc">{{ form.descripcion }}</label>
+            <input type="text" class="form-control" id="desc" placeholder="Descripcion del archivo">
+        </div>
+    <button class="btn btn-primary active" type="submit"> Importar </button>-->
+</form>

@@ -1,0 +1,178 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <div class="mt-5">
+        <form method="POST" action="">
+            {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %} alert-danger{% endif %}
+                                  {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %} alert-success{% endif %}">{{ message|safe }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endfor %}
+            {% endif %}
+            <div class="card border-info">
+                <div class="card-header bg-info text-white">
+                        DISS_submission
+                </div>
+                <div class="card-body">
+                    <div class="form-row ml-3">
+                        <div class="col">
+                            <label for="nombre" class="mb-0">{{ form.publishing.label_tag }}</label>
+                            {{form.publishing}}
+                        </div>
+                        <div class="col">
+                            <label for="nombre" class="mb-0">{{ form.embargo.label_tag }}</label>
+                            {{form.embargo}}
+                        </div>
+                        <div class="col">
+                            <label for="nombre" class="mb-0">{{ form.third_party.label_tag }}</label>
+                            {{form.third_party}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-info mt-3">
+                <div class="card-header bg-info text-white">
+                        DISS_author
+                </div>
+                <div class="card-body">
+                    <div class="form-row ml-3">
+                        <div class="col">
+                            <label for="nombre" class="mb-0">{{ form.author_type.label_tag }}</label>
+                            {{form.author_type}}
+                        </div>
+                        <div class="col">
+                            <label for="nombre" class="mb-0">{{ form.surname.label_tag }}</label>
+                            {{form.surname}}
+                        </div>
+                        <div class="col">
+                            <label for="nombre" class="mb-0">{{ form.fname.label_tag }}</label>
+                            {{form.fname}}
+                        </div>
+                        <div class="col">
+                            <label for="nombre" class="mb-0">{{ form.middle.label_tag }}</label>
+                            {{form.middle}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-info mt-3">
+                <div class="card-header bg-info text-white">
+                        DISS_description
+                </div>
+                <div class="card-body">
+                    <div class="form-row ml-3">
+                        <div class="col">
+                            <label for="nombre" class="mb-0">{{ form.page_count.label_tag }}</label>
+                            {{form.page_count}}
+                        </div>
+                        <div class="col">
+                            <label for="nombre" class="mb-0">{{ form.page_type.label_tag }}</label>
+                            {{form.page_type}}
+                        </div>
+                        <div class="col">
+                            <label for="nombre" class="mb-0">{{ form.external_id.label_tag }}</label>
+                            {{form.external_id}}
+                        </div>
+                        <div class="col">
+                            <label for="nombre" class="mb-0">{{ form.apply_copyright.label_tag }}</label>
+                            {{form.apply_copyright}}
+                        </div>
+                    </div>      
+                    <div class="form-row mt-3 ml-3">
+                        <div class="col-12">
+                            <label for="nombre" class="mb-0">{{ form.title.label_tag }}</label>
+                            {{form.title}}
+                        </div>
+                        <div class="col mt-3">
+                            <label for="nombre" class="mb-0">{{ form.comp_date.label_tag }}</label>
+                            {{form.comp_date}}
+                        </div>
+                        <div class="col mt-3">
+                            <label for="nombre" class="mb-0">{{ form.accept_date.label_tag }}</label>
+                            {{form.accept_date}}
+                        </div>
+                        <div class="col mt-3">
+                            <label for="nombre" class="mb-0">{{ form.languaje.label_tag }}</label>
+                            {{form.languaje}}
+                        </div>
+                    </div>
+                    <div class="form-row mt-3 ml-3">
+                        <div class="col-4">
+                            <label for="nombre" class="mb-0">{{ form.degree.label_tag }}</label>
+                            {{form.degree}}
+                        </div>
+                        <div class="col-4">
+                            <label for="nombre" class="mb-0">{{ form.inst_code.label_tag }}</label>
+                            {{form.inst_code}}
+                        </div>
+                        <div class="col-4">
+                            <label for="nombre" class="mb-0">{{ form.inst_name.label_tag }}</label>
+                            {{form.inst_name}}
+                        </div>
+                        <div class="col-4 mt-3">
+                            <label for="nombre" class="mb-0">{{ form.processing_code.label_tag }}</label>
+                            {{form.processing_code}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-info mt-3">
+                <div class="card-header bg-info text-white">
+                        DISS_content
+                </div>
+                <div class="card-body">
+                    <div class="form-row ml-3">
+                        <div class="col-12">
+                            <label for="nombre" class="mb-0">{{ form.para.label_tag }}</label>
+                            {{form.para}}
+                        </div>
+                        <div class="col-6 mt-3">
+                            <label for="nombre" class="mb-0">{{ form.binary_type.label_tag }}</label>
+                            {{form.binary_type}}
+                        </div>
+                        <div class="col-6 mt-3">
+                            <label for="nombre" class="mb-0">{{ form.binary.label_tag }}</label>
+                            {{form.binary}}
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+
+            <div class="form-group row mt-4 float-right">
+                <div class="col-sm-5">
+                    <a href="/archivo" class="btn btn-secondary">Cancelar</a>
+                </div>
+                <div class="col-sm-5">
+                    <button type="submit" class="btn btn-info">Guardar</button>
+                </div>
+            </div>
+            <!--{% for field in form.visible_fields %}
+                <div class="form-group col-5">
+                    <label for="nombre">{{ field.label_tag }}</label>
+                    {{field}}
+                </div>
+            {% endfor %}-->
+            <!--{{ form.as_p }}-->
+            <!--<div class="form-group">
+                <label for="nombre">{{ form.publishing.label_tag }}</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="tipo">{{ form.tipo }}</label>
+                <input type="text" class="form-control" id="tipo" placeholder="CSV o XML">
+            </div>
+            <div class="form-group">
+                    <label for="desc">{{ form.descripcion }}</label>
+                    <input type="text" class="form-control" id="desc" placeholder="Descripcion del archivo">
+            </div>-->
+        </form>
+    </div>    
+{% endblock %}
