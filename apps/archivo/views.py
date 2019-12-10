@@ -9,7 +9,6 @@ from apps.archivo.xml_create.creator import CreateXML
 from bootstrap_modal_forms.generic import BSModalCreateView
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import DetailView
-import os
  
 # Vistas basadas en Metodos
 def archivo(request):
