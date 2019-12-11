@@ -104,7 +104,7 @@ class CreateXML:
     def downloadPDF(self, filename):
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh.connect('172.16.40.187', username = 'ecisneros', password='eime')
+        ssh.connect('000.00.00.000', username = 'xxxxxxx', password='*******')
         sftp = ssh.open_sftp()
         localpath = 'media/files_pdf/%s' % (filename)
         remotepath = '/datos/pdfs/%s' % (filename)
