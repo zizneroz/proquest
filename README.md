@@ -1,6 +1,3 @@
-gh-md-toc
-=========
-
 ### Características
 
 - Uso de DJango 2.2.7 y Python 3
@@ -17,10 +14,6 @@ gh-md-toc
 
 
 **Contenido**
-
-[TOCM]
-
-[TOC]
 
 ** **
 ##Iniciar el proyecto
