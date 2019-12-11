@@ -47,9 +47,11 @@ DJango:
 Antes de todo debemos de migrar nuestra base de datos, lo cual se hace con los siguientes comandos:
 
 Si no tenemos los archivos de migracion debemos crearlos:
+
 `$ python3 manage.py makemigrations`
 
 Enseguida, ejecutaremos el comando para crear el modelo en la base:
+
 `$ python3 manage.py migrate`
 
 <a name="server"/>
@@ -57,6 +59,7 @@ Enseguida, ejecutaremos el comando para crear el modelo en la base:
 ### Ejecutar el servidor
 
 Para poder correr el servidor de DJango en desarrollo, necesitamos ubicarnos en la carpeta donde se encuentra clonado el proyecto y ejecutar el siguiente comando:
+
 `$ python3 manage.py runserver localhost:8080`
 
 <a name="links"/>
