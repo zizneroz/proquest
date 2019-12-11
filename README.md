@@ -15,10 +15,18 @@
 
 **Contenido**
 
-** **
-##Iniciar el proyecto
+<!--ts-->
+   - [Iniciar el proyecto](#heading)
+ 	* [Comprobar versiones de python y django](#sub-heading)
+	+ [Crear base de datos](#sub-heading-1)
+	* [Ejecutar el servidor](#sub-heading-2)
+	* [Links para descargar python y django](#sub-heading-3)
+<!--te-->
 
-###Comprobar versiones de python y django
+** **
+## Iniciar el proyecto
+
+### Comprobar versiones de python y django
 
 Para verificar que se tiene instalado python, ejecutar:
 
@@ -28,7 +36,7 @@ DJango:
 
 ` $ django-admin --version`
 
-###Crear base de datos
+### Crear base de datos
 
 Antes de todo debemos de migrar nuestra base de datos, lo cual se hace con los siguientes comandos:
 
@@ -38,12 +46,12 @@ Si no tenemos los archivos de migracion debemos crearlos:
 Enseguida, ejecutaremos el comando para crear el modelo en la base:
 `$ python3 manage.py migrate`
 
-###Ejecutar el servidor
+### Ejecutar el servidor
 Para poder correr el servidor de DJango en desarrollo, necesitamos ubicarnos en la carpeta donde se encuentra clonado el proyecto y ejecutar el siguiente comando:
 `$ python3 manage.py runserver localhost:8080`
 
 
-###Links para descargar python y django
+### Links para descargar python y django
 
 `<Python>` : <https://www.python.org/downloads/>
 
