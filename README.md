@@ -16,19 +16,17 @@
 **Contenido**
 
 <!--ts-->
-- [Iniciar el proyecto](#inicio)
-	* [Comprobar versiones de python y django](#versiones)
-	+ [Crear base de datos](#database)
+- [Iniciar el proyecto](#iniciar-el-proyecto)
+	* [Comprobar versiones de python y django](#comprobar-versiones-de-python-y-django)
+	+ [Crear base de datos](#crear-base-de-datos)
 	* [Ejecutar el servidor](#server)
 	* [Links para descargar python y django](#links)
 <!--te-->
 
 ** **
-<a name="inicio"/>
 
 ## Iniciar el proyecto
 
-<a name="versiones"/>
 
 ### Comprobar versiones de python y django
 
@@ -40,7 +38,6 @@ DJango:
 
 >	` $ django-admin --version`
 
-<a name="database"/>
 
 ### Crear base de datos
 
